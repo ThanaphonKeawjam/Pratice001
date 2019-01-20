@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pratice001</title>
+</head>
+
+<body>
+    <h1>Authentication</h1>
+    <pre id="auth-info"></pre>
+    <input type="text" placeholder="email" id="email">
+    <input type="text" placeholder="password" id="password">
+    <br> <br>
+    <button onclick="createUser()">Create User</button>
+    <button onclick="loginWithEmail()">Login</button>
+    <button onclick="logout()">Logout</button>
+    <br> <br>
+    <button onclick="loginWithGoogle()">Login with Google</button>
+    <button onclick="loginWithFacebook()">Login with Facebook</button>
+
+    <hr>
+
+    <h1>Realtime database</h1>
+    <pre id="realtime-data"></pre> <br>
+    <button onclick="setData()">Set</button>
+    <button onclick="updateData()">Update</button>
+    <button onclick="pushData()">Push</button>
+    <button onclick="deleteData()">Delete</button>
+
+    <hr>
+
+    <h1>Cloud Storages</h1>
+    <h3 id="progress"></h3>
+    <div id="file-list"></div>
+    <input id="input-file" type="file" onchange="addFile()">
+    <br> <br>
+    <button onclick="uploadFile()">upload</button>
+    <button onclick="pause()">pause</button>
+    <button onclick="resume()">resume</button>
+    <button onclick="cancel()">cancel</button>
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDloPv6kRpmYCqFT_H2GpOR4FKOBnNgxXo",
+            authDomain: "pratice001-6a09e.firebaseapp.com",
+            databaseURL: "https://pratice001-6a09e.firebaseio.com",
+            projectId: "pratice001-6a09e",
+            storageBucket: "pratice001-6a09e.appspot.com",
+            messagingSenderId: "766211213669"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="database.js"></script>
+    <script src="storage.js"></script>
+    <script src="auth.js"></script>
+
+</body>
+
+</html>
